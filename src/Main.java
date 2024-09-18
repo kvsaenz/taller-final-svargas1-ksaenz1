@@ -432,8 +432,8 @@ public class Main {
                                     System.out.println("0. Volver al menú principal");
                                     System.out.println("1. Volver al menú anterior");
                                     System.out.println(line);
-                                    String subMenuCuatroC = scanner.next();
-                                    switch (subMenuCuatroC) {
+                                    String subMenuCuatroD = scanner.next();
+                                    switch (subMenuCuatroD) {
                                         case "a":
                                             System.out.println(line);
                                             System.out.println("++ \n\nEl operador de incremento aumenta el valor de su operando en 1.\n\nEjemplo: \nint  x;\n" +
@@ -474,9 +474,11 @@ public class Main {
                                             break;
                                     }
                                 }
+                                break;
                             case "0":
                                 ejecucionCuatro = false;
                                 System.out.println("Volviendo al menú principal...");
+                                break;
                             default:
                                 System.out.println("Opción inválida. Por favor, intente de nuevo.");
                                 scanner.nextLine();
@@ -487,6 +489,7 @@ public class Main {
                         }
 
                     }
+                    break;
                 case 5:
                     boolean ejecucionCinco = true;
                     while (ejecucionCinco) {
@@ -764,8 +767,8 @@ public class Main {
                         System.out.println(line);
                         System.out.print("Seleccione una opción: ");
 
-                        String subMenuSiete = scanner.next();
-                        switch (subMenuSiete) {
+                        String subMenuNueve = scanner.next();
+                        switch (subMenuNueve) {
 
                             case "a":
                                 System.out.println(line);
@@ -783,9 +786,9 @@ public class Main {
                             case "b":
                                 System.out.println(line);
                                 System.out.println("PROGRAMA");
-                                System.out.println("Digite un numero de 1 a 10, para realizar la sumatoria");
+                                System.out.println("Digite un numero de 1 a 20, para realizar la sumatoria");
                                 int numero = scanner.nextInt();
-                                if (numero>20 || numero<1){
+                                if (numero > 20 || numero < 1) {
                                     System.out.println("numero ingresado no es valido");
                                     System.out.println("Presione Enter para continuar...");
                                     scanner.nextLine();
@@ -794,11 +797,11 @@ public class Main {
                                 }
                                 int numeroSuma = 1;
                                 int sumaTotal = 0;
-                                while (numeroSuma<=numero){
+                                while (numeroSuma <= numero) {
                                     sumaTotal = sumaTotal + numeroSuma;
                                     numeroSuma++;
                                 }
-                                System.out.println("La suma total es: "+sumaTotal);
+                                System.out.println("La suma total es: " + sumaTotal);
                                 System.out.println("Presione Enter para continuar...");
                                 scanner.nextLine();
                                 scanner.nextLine();
@@ -818,7 +821,59 @@ public class Main {
 
 
                 case 10:
-                    System.out.println("Has seleccionado la opción 10");
+                    boolean ejecucionDiez = true;
+                    while (ejecucionDiez) {
+                        System.out.println(line);
+                        System.out.println("".concat(" ".repeat(5)).concat("WHILE"));
+                        System.out.println(line);
+                        System.out.println("a. QUE ES FOR");
+                        System.out.println("b. PROGRAMA");
+                        System.out.println("0. Volver al menú principal");
+                        System.out.println(line);
+                        System.out.print("Seleccione una opción: ");
+
+                        String subMenuNueve = scanner.next();
+                        switch (subMenuNueve) {
+
+                            case "a":
+                                System.out.println(line);
+                                System.out.println("FOR \n\nCrea un bucle que consiste en tres expresiones opcionales, \nencerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.\n\nEJEMPLO: \nint n,i;\n" +
+                                        "int suma;\n" +
+                                        "for(i=suma=0;i<=n;i++)\n" +
+                                        "suma=suma+i;");
+                                System.out.println(line);
+                                System.out.println("Presione Enter para continuar...");
+                                scanner.nextLine();
+                                scanner.nextLine();
+                                break;
+                            case "b":
+                                System.out.println(line);
+                                System.out.println("PROGRAMA");
+                                System.out.println("Digite un numero de 1 a 20, para realizar la sumatoria");
+                                int numero = scanner.nextInt();
+                                int sumaTotal = 0;
+                                for (int i = 1; i <= numero; i++) {
+                                    sumaTotal = sumaTotal + i;
+                                }
+                                System.out.println("El resultado es: " + sumaTotal);
+                                System.out.println("Presione Enter para continuar...");
+                                scanner.nextLine();
+                                scanner.nextLine();
+                                break;
+                            case "0":
+                                ejecucionDiez = false;
+                                System.out.println("Volviendo al menú principal...");
+                                break;
+                            default:
+                                System.out.println("Opción inválida. Por favor, intente de nuevo.");
+                                scanner.nextLine();
+                                scanner.nextLine();
+                                break;
+
+                        }
+
+
+                    }
                     break;
                 case 0:
                     menu = false;
